@@ -15,7 +15,6 @@ def main():
             if event.type == pygame.QUIT:
                 return
                 
-        
         screen.fill((0, 0, 0))  # Fill the screen with black color
         pygame.display.flip()   # Refresh the screen
         dt = server_clock.tick(60) / 1000
