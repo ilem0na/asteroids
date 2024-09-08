@@ -50,6 +50,12 @@ def main():
         # Update all updatable objects
         for entity in updatable:
             entity.update(dt)
+            
+        for a in asteroid:
+            if a.check_collision(player):
+                print("Game Over!")
+                pygame.quit()
+                return
         
         # Limit the framerate to 60 FPS
         dt = clock.tick(60) / 1000
